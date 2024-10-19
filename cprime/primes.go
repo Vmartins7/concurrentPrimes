@@ -93,7 +93,7 @@ func isPrimeInInterval(natural, start, lim uint64, ret chan bool) {
 	if start%2 == 0 {
 		start--
 	}
-	for i := start; i < lim; i += 2 {
+	for i := start; i <= lim; i += 2 {
 		if natural%i == 0 {
 			ret <- false
 			return

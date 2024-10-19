@@ -16,6 +16,7 @@ var scenarios []scenario = []scenario{
 	{3, true},
 	{5, true},
 	{8, false},
+	{9, false},
 	{7, true},
 	{11, true},
 	{37027414657, true},
@@ -27,9 +28,9 @@ var scenarios []scenario = []scenario{
 
 func printMessage(t *testing.T, scene scenario) {
 	if scene.isPrime {
-		t.Errorf("é falso que o valor %v é primo", scene.param)
-	} else {
 		t.Errorf("é falso que o valor %v é composto", scene.param)
+	} else {
+		t.Errorf("é falso que o valor %v é primo", scene.param)
 	}
 }
 
